@@ -1,0 +1,6047 @@
+[
+  {
+    "id": "66709e1c-a053-44f2-9a26-8536295fc046",
+    "timestamp": "2026-08-22T04:18:12.735Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 46025,
+    "metadata": {
+      "latency_ms": 3262,
+      "p99_ms": 9163,
+      "spike_multiplier": 3
+    },
+    "score": 0.8373,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2798,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue p99 latency spike in ap-southeast-1: 3262ms. 46.0K users experiencing slow page loads. ⚡ Immediate action required."
+  },
+  {
+    "id": "ab05c9f2-d706-4ce9-ba91-0d1733200b6d",
+    "timestamp": "2026-08-22T04:18:15.058Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "search-ui",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 45674,
+    "metadata": {
+      "error_rate": 34.03,
+      "prev_error_rate": 0.94
+    },
+    "score": 0.6621,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2796,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "User-facing error rate on search-ui jumped to 34.03% in ap-northeast-1. 45.7K users encountering failures. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ce7a4801-8168-4b37-8248-545a3c5472e8",
+    "timestamp": "2026-08-22T04:18:17.349Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 3585,
+    "metadata": {
+      "percent": 94,
+      "free_gb": 2.74
+    },
+    "score": 0.5958,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2133,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Storage capacity warning: worker-queue (eu-west-1) at 94% disk. Write-ahead logs may be at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "722f9c98-c5ee-4c88-94cb-8de2ee7746ca",
+    "timestamp": "2026-08-22T04:18:21.302Z",
+    "source": "product",
+    "type": "rollback",
+    "service": "analytics-pipeline",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 18555,
+    "metadata": {
+      "version": "2.4.7",
+      "reason": "latency_regression"
+    },
+    "score": 0.8136,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2561,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::analytics-pipeline::rollback",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "analytics-pipeline deployment rolled back in us-west-2. Engineers are investigating root cause of latency_regression. ⚡ Immediate action required."
+  },
+  {
+    "id": "48559741-8476-43c5-87f5-75d42e10fb30",
+    "timestamp": "2026-08-22T04:18:23.718Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 2464,
+    "metadata": {
+      "cpu_percent": 91,
+      "duration_seconds": 44
+    },
+    "score": 0.761,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2035,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on worker-queue (91%) detected in ap-southeast-1. 2.5K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "25d6bd53-160c-4a99-998a-3471b395902e",
+    "timestamp": "2026-08-22T04:18:26.014Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "support-portal",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 2370,
+    "metadata": {
+      "spike_multiplier": 12,
+      "top_issue": "slow-loading"
+    },
+    "score": 0.6725,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2025,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "2.4K new support tickets filed for support-portal in eu-west-1 in the last 15 minutes. Common theme: \"slow-loading\". 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "51a652ff-47f4-416d-a805-e80e96ded608",
+    "timestamp": "2026-08-22T04:18:26.014Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "search-ui",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 41888,
+    "metadata": {
+      "error_rate": 31.71,
+      "prev_error_rate": 1.58
+    },
+    "score": 0.6598,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2773,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Error surge on search-ui (us-west-2): 31.71% error rate. Likely correlated with recent deployment. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "408d0605-66e1-44f1-b0b1-0c1d4ff48538",
+    "timestamp": "2026-08-22T04:18:28.249Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "db-primary",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 930,
+    "metadata": {
+      "percent": 96,
+      "free_gb": 15.19
+    },
+    "score": 0.4731,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.1781,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "db-primary disk usage critical at 96% in us-east-1. Database writes may begin failing within 2–4 hours. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "ca596999-c031-4cc3-863b-6a743c8bd105",
+    "timestamp": "2026-08-22T04:18:31.217Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 10913,
+    "metadata": {
+      "abandonment_rate": 73.16,
+      "revenue_impact": 26267.52
+    },
+    "score": 0.7123,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2423,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Cart abandonment rate on checkout-flow spiked to 73.16% in eu-west-1. Revenue impact estimate: $26,268/hr. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "93f1c101-8dc1-4eb3-b77a-8edaf35487b1",
+    "timestamp": "2026-08-22T04:18:32.431Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "cache-layer",
+    "region": "eu-west-1",
+    "severity": 2,
+    "userImpact": 37218,
+    "metadata": {
+      "latency_ms": 3104,
+      "p99_ms": 7950,
+      "spike_multiplier": 6
+    },
+    "score": 0.5692,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2742,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on cache-layer has surged to 3104ms in eu-west-1, exceeding SLA threshold by 6×. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "92ed08c2-8bea-4454-89f0-4ae33593a25e",
+    "timestamp": "2026-08-22T04:18:34.953Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "billing-service",
+    "region": "eu-west-1",
+    "severity": 2,
+    "userImpact": 13938,
+    "metadata": {
+      "flag_name": "onboarding-flow-b",
+      "flag_state": false,
+      "percent": 30
+    },
+    "score": 0.5437,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2487,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Feature flag \"onboarding-flow-b\" toggled disabled on billing-service in eu-west-1, affecting 30% of users. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "57e09d8e-1d15-47b7-9f8a-8e1d7d09f88c",
+    "timestamp": "2026-08-22T04:18:37.549Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "dashboard",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 1735,
+    "metadata": {
+      "spike_multiplier": 9,
+      "top_issue": "slow-loading"
+    },
+    "score": 0.5769,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.1944,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support escalation: dashboard tickets surging in ap-northeast-1. 1.7K affected users reporting \"slow-loading\". ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "b61ebf21-32af-4938-a9b4-472abc22eca4",
+    "timestamp": "2026-08-22T04:18:38.639Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "cache-layer",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 91044,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:16:52.639Z",
+      "health_check_failures": 15
+    },
+    "score": 0.8626,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2976,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CRITICAL: cache-layer health checks failing in us-east-1. 91.0K users completely unable to access the service. Cluster of 2 related infrastructure events observed in the same window. ⚡ Immediate action required."
+  },
+  {
+    "id": "c8b8c402-da5b-4ad7-9cc2-61622071a172",
+    "timestamp": "2026-08-22T04:18:38.639Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 57344,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:14:10.639Z",
+      "health_check_failures": 9
+    },
+    "score": 0.8505,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2855,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue is DOWN in ap-southeast-1. All 57.3K active users are blocked. Immediate escalation required. 2 other infrastructure events share similar timing — possible common root cause. ⚡ Immediate action required."
+  },
+  {
+    "id": "82dd15ff-ab92-4c17-9253-beef382bc864",
+    "timestamp": "2026-08-22T04:18:45.034Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "search-ui",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 36190,
+    "metadata": {
+      "error_rate": 29.26,
+      "prev_error_rate": 1.11
+    },
+    "score": 0.831,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2735,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "User-facing error rate on search-ui jumped to 29.26% in ap-northeast-1. 36.2K users encountering failures. ⚡ Immediate action required."
+  },
+  {
+    "id": "fa847bf4-f742-4d76-8e93-27325d855196",
+    "timestamp": "2026-08-22T04:18:46.242Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "cdn-edge",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 72126,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:17:20.242Z",
+      "health_check_failures": 9
+    },
+    "score": 0.849,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2915,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cdn-edge::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Service outage confirmed: cdn-edge in ap-southeast-1 is unreachable. On-call team should be paged immediately. ⚡ Immediate action required."
+  },
+  {
+    "id": "6bc1febc-c080-4cb6-80db-16f1d90b1d23",
+    "timestamp": "2026-08-22T04:18:46.242Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "cache-layer",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 71,
+    "metadata": {
+      "percent": 91,
+      "free_gb": 35.67
+    },
+    "score": 0.4939,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.1114,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Disk usage on cache-layer in ap-northeast-1 has reached 91%. Log rotation or cleanup required to prevent write failures. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "50578fd3-f2a8-4f08-842a-4876c8049204",
+    "timestamp": "2026-08-22T04:18:51.651Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "billing-service",
+    "region": "ap-northeast-1",
+    "severity": 2,
+    "userImpact": 14831,
+    "metadata": {
+      "version": "6.38.35",
+      "commit": "8b380d1b",
+      "deployer": "ci-robot"
+    },
+    "score": 0.5453,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2503,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "New deployment of billing-service v6.38.35 is live in ap-northeast-1. Monitor error rates and latency for regression. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "c7f4edc9-1c2f-42e6-ad62-91da286b4989",
+    "timestamp": "2026-08-22T04:18:51.728Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "db-primary",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 2220,
+    "metadata": {
+      "percent": 79,
+      "free_gb": 13.34
+    },
+    "score": 0.5033,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2008,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::disk_warning",
+      "clusterSize": 2,
+      "relatedEvents": [
+        "09399861-ce67-4e7f-a493-77f543a6fe00"
+      ],
+      "source": "infrastructure"
+    },
+    "narrative": "Storage capacity warning: db-primary (us-west-2) at 79% disk. Write-ahead logs may be at risk. Cluster of 2 related infrastructure events observed in the same window. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "09399861-ce67-4e7f-a493-77f543a6fe00",
+    "timestamp": "2026-08-22T04:18:51.727Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "db-primary",
+    "region": "ap-southeast-1",
+    "severity": 2,
+    "userImpact": 238,
+    "metadata": {
+      "percent": 94,
+      "free_gb": 38.04
+    },
+    "score": 0.4452,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.1427,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::disk_warning",
+      "clusterSize": 2,
+      "relatedEvents": [
+        "c7f4edc9-1c2f-42e6-ad62-91da286b4989"
+      ],
+      "source": "infrastructure"
+    },
+    "narrative": "Disk usage on db-primary in ap-southeast-1 has reached 94%. Log rotation or cleanup required to prevent write failures. Part of a 2-event cluster from infrastructure; consider reviewing together. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "1d398fb4-4015-49a5-a7f2-f3ddc03e0f98",
+    "timestamp": "2026-08-22T04:18:56.847Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "onboarding",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 34110,
+    "metadata": {
+      "percent": 74.8,
+      "drop_count": 3750
+    },
+    "score": 0.8295,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.272,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "onboarding session collapse in eu-west-1: 34.1K sessions terminated unexpectedly. ⚡ Immediate action required."
+  },
+  {
+    "id": "67c75d5e-ed0c-4345-b474-0d5cf029b472",
+    "timestamp": "2026-08-22T04:18:59.025Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "payment-service",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 26197,
+    "metadata": {
+      "percent": 86,
+      "heap_used_gb": 8.14
+    },
+    "score": 0.7351,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2651,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Memory alert on payment-service in us-east-1: 86% consumed. Potential memory leak detected across 26.2K active sessions. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "5fcc3464-e1c0-442e-bc5f-11989f26fd37",
+    "timestamp": "2026-08-22T04:18:59.025Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "auth-service",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 7567,
+    "metadata": {
+      "packet_loss_pct": 24,
+      "error_rate": 32.24
+    },
+    "score": 0.6152,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2327,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "auth-service is experiencing connectivity issues in us-west-2. 7.6K users seeing request timeouts. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "0c393863-8b32-403b-a83f-dada56684f43",
+    "timestamp": "2026-08-22T04:19:04.408Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "db-primary",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 4544,
+    "metadata": {
+      "percent": 84,
+      "free_gb": 44.73
+    },
+    "score": 0.6894,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2195,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Storage capacity warning: db-primary (ap-northeast-1) at 84% disk. Write-ahead logs may be at risk. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "b120971a-4a06-4901-b927-2a140aff93bd",
+    "timestamp": "2026-08-22T04:19:05.609Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "support-portal",
+    "region": "ap-southeast-1",
+    "severity": 4,
+    "userImpact": 26319,
+    "metadata": {
+      "percent": 46.11,
+      "drop_count": 27638
+    },
+    "score": 0.7352,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2652,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on support-portal dropped 46.11% in ap-southeast-1. Possible crash or forced logouts affecting 26.3K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "2397040c-2b1d-4054-a8ae-0dd7cefb09b5",
+    "timestamp": "2026-08-22T04:19:09.431Z",
+    "source": "product",
+    "type": "rollback",
+    "service": "notification-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 4954,
+    "metadata": {
+      "version": "7.19.38",
+      "reason": "latency_regression"
+    },
+    "score": 0.7792,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2217,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::notification-service::rollback",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "notification-service deployment rolled back in ap-northeast-1. Engineers are investigating root cause of latency_regression. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "e155de56-4098-454d-a1d5-aca50766a9cd",
+    "timestamp": "2026-08-22T04:19:10.054Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "cache-layer",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 60073,
+    "metadata": {
+      "latency_ms": 3661,
+      "p99_ms": 8488,
+      "spike_multiplier": 18
+    },
+    "score": 0.8442,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2867,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "cache-layer p99 latency spike in ap-southeast-1: 3661ms. 60.1K users experiencing slow page loads. ⚡ Immediate action required."
+  },
+  {
+    "id": "abde606e-a1f6-4539-b3c0-61225626a108",
+    "timestamp": "2026-08-22T04:19:10.054Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "api-gateway",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 19995,
+    "metadata": {
+      "percent": 77,
+      "heap_used_gb": 22.82
+    },
+    "score": 0.7281,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2581,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Heap exhaustion imminent on api-gateway (77% memory, eu-west-1). Immediate attention required to prevent crash. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ef7f45db-a4ba-4313-b365-c971ba0058b8",
+    "timestamp": "2026-08-22T04:19:11.673Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "onboarding",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 2752,
+    "metadata": {
+      "spike_multiplier": 3,
+      "top_issue": "notification-not-sent"
+    },
+    "score": 0.5889,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2064,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support ticket volume on onboarding spiked 3× above baseline in us-west-2. Top issue: \"notification-not-sent\". ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "621e887a-ce8e-483e-9525-fdf642a25190",
+    "timestamp": "2026-08-22T04:19:14.561Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "cache-layer",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 2368,
+    "metadata": {
+      "percent": 85,
+      "free_gb": 30.36
+    },
+    "score": 0.585,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2025,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Disk usage on cache-layer in us-west-2 has reached 85%. Log rotation or cleanup required to prevent write failures. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "8ad39ce1-73aa-4613-96b4-5601960add39",
+    "timestamp": "2026-08-22T04:19:14.561Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "worker-queue",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 4855,
+    "metadata": {
+      "percent": 75,
+      "heap_used_gb": 23.06
+    },
+    "score": 0.5162,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2212,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Heap exhaustion imminent on worker-queue (75% memory, us-west-2). Immediate attention required to prevent crash. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "c6650df9-0cfc-4f5c-ab27-56790adf83c1",
+    "timestamp": "2026-08-22T04:19:18.741Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "checkout-flow",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 7869,
+    "metadata": {
+      "spike_multiplier": 3,
+      "top_issue": "cannot-login"
+    },
+    "score": 0.6163,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2338,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support escalation: checkout-flow tickets surging in us-west-2. 7.9K affected users reporting \"cannot-login\". 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "b6666644-8204-45c7-97e5-8f1f2d3f80be",
+    "timestamp": "2026-08-22T04:19:22.315Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "cache-layer",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 6577,
+    "metadata": {
+      "packet_loss_pct": 12.85,
+      "error_rate": 30.21
+    },
+    "score": 0.6116,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2291,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "cache-layer is experiencing connectivity issues in eu-west-1. 6.6K users seeing request timeouts. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "33a361e1-20a9-4edb-83b0-6fe3c2b72197",
+    "timestamp": "2026-08-22T04:19:22.391Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "analytics-pipeline",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 8892,
+    "metadata": {
+      "flag_name": "onboarding-flow-b",
+      "flag_state": true,
+      "percent": 39
+    },
+    "score": 0.6194,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2369,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::analytics-pipeline::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "A/B test adjustment: onboarding-flow-b is enabled on analytics-pipeline (eu-west-1) for 39% traffic. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "b1d381f3-7dcb-4b10-83c4-2ef0022b1125",
+    "timestamp": "2026-08-22T04:19:26.820Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "payment-service",
+    "region": "ap-northeast-1",
+    "severity": 2,
+    "userImpact": 10599,
+    "metadata": {
+      "latency_ms": 1815,
+      "p99_ms": 7153,
+      "spike_multiplier": 16
+    },
+    "score": 0.5365,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2415,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on payment-service has surged to 1815ms in ap-northeast-1, exceeding SLA threshold by 16×. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "079439a2-9941-43bb-8ab6-ea91aec6cd95",
+    "timestamp": "2026-08-22T04:19:30.714Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "onboarding",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 14677,
+    "metadata": {
+      "failure_rate": 34.63,
+      "attempts": 6860
+    },
+    "score": 0.6325,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.25,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Login failure rate on onboarding is 34.63% in us-east-1. 14.7K users unable to authenticate. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "03567fec-a7a4-4b1c-ac26-087beb9e813e",
+    "timestamp": "2026-08-22T04:19:31.827Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "db-primary",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 5689,
+    "metadata": {
+      "percent": 94,
+      "heap_used_gb": 13.7
+    },
+    "score": 0.6078,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2253,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Memory alert on db-primary in ap-southeast-1: 94% consumed. Potential memory leak detected across 5.7K active sessions. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "e192e721-096e-4946-b220-873ce3dd3440",
+    "timestamp": "2026-08-22T04:19:37.778Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "auth-service",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 40734,
+    "metadata": {
+      "cpu_percent": 93,
+      "duration_seconds": 256
+    },
+    "score": 0.6591,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2766,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "auth-service is pegging CPU at 93% in ap-southeast-1. If unresolved, this may cascade to dependent services within minutes. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "82f78088-5ec7-4cc8-9bcb-ef50832a4b8c",
+    "timestamp": "2026-08-22T04:19:37.929Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "admin-portal",
+    "region": "us-west-2",
+    "severity": 1,
+    "userImpact": 1289,
+    "metadata": {
+      "flag": "retry-policy",
+      "state": "updated"
+    },
+    "score": 0.3941,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.1866,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::admin-portal::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "admin-portal config updated in us-west-2: retry-policy is now updated. Observe downstream behavior. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "89e008e3-eb10-49a0-8c79-09760d8e6bd7",
+    "timestamp": "2026-08-22T04:19:40.838Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 2578,
+    "metadata": {
+      "abandonment_rate": 40.74,
+      "revenue_impact": 9317.32
+    },
+    "score": 0.4997,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2047,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow checkout flow abandonment surge in us-east-1: 40.74% drop-off. Possible payment gateway or UX issue. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "e8e48da0-5237-4fc4-8dd3-b595072e7c2e",
+    "timestamp": "2026-08-22T04:19:43.491Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "api-gateway",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 48072,
+    "metadata": {
+      "cpu_percent": 92,
+      "duration_seconds": 222
+    },
+    "score": 0.7509,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2809,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "api-gateway is pegging CPU at 92% in eu-west-1. If unresolved, this may cascade to dependent services within minutes. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "74b50696-61f5-4ab8-86be-23f45d1f09bf",
+    "timestamp": "2026-08-22T04:19:48.807Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "admin-portal",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 2660,
+    "metadata": {
+      "failure_rate": 38.39,
+      "attempts": 4762
+    },
+    "score": 0.763,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2055,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::admin-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Authentication spike: 2.7K failed login attempts on admin-portal in eu-west-1. Potential credential stuffing or outage. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "d9e6d69e-2f0a-4d33-805f-e4d0ac88b38c",
+    "timestamp": "2026-08-22T04:19:50.865Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "payment-service",
+    "region": "ap-northeast-1",
+    "severity": 2,
+    "userImpact": 25879,
+    "metadata": {
+      "percent": 91,
+      "heap_used_gb": 18.92
+    },
+    "score": 0.5673,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2648,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service is running low on heap memory in ap-northeast-1 (91% used). OOM kill risk if traffic continues. Cluster of 2 related infrastructure events observed in the same window. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "a654b591-bafc-4c5f-9fb5-8af19dd1b006",
+    "timestamp": "2026-08-22T04:19:50.865Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "db-primary",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 3509,
+    "metadata": {
+      "percent": 98,
+      "heap_used_gb": 22.89
+    },
+    "score": 0.5152,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2127,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "db-primary is running low on heap memory in us-west-2 (98% used). OOM kill risk if traffic continues. Part of a 2-event cluster from infrastructure; consider reviewing together. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "35deea80-2400-4c79-8c5b-7e18e5721008",
+    "timestamp": "2026-08-22T04:19:56.462Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "mobile-api",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 4791,
+    "metadata": {
+      "flag": "retry-policy",
+      "state": "updated"
+    },
+    "score": 0.6033,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2208,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::mobile-api::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "mobile-api config updated in us-east-1: retry-policy is now updated. Observe downstream behavior. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ee30aedb-295e-4642-825b-2440f24ac7c7",
+    "timestamp": "2026-08-22T04:19:58.173Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "auth-service",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 42793,
+    "metadata": {
+      "latency_ms": 4493,
+      "p99_ms": 12008,
+      "spike_multiplier": 16
+    },
+    "score": 0.7479,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2779,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on auth-service (eu-west-1): 4493ms response time affecting 42.8K active users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "68bffef1-eadd-416f-8e47-3bdfe091798f",
+    "timestamp": "2026-08-22T04:19:59.790Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "dashboard",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 47277,
+    "metadata": {
+      "percent": 31.51,
+      "drop_count": 45914
+    },
+    "score": 0.838,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2805,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on dashboard dropped 31.51% in us-west-2. Possible crash or forced logouts affecting 47.3K users. ⚡ Immediate action required."
+  },
+  {
+    "id": "a5622af3-c937-42d4-9c43-21e3bdcbda1b",
+    "timestamp": "2026-08-22T04:20:02.864Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "cdn-edge",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 2117,
+    "metadata": {
+      "cpu_percent": 99,
+      "duration_seconds": 253
+    },
+    "score": 0.5821,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.1996,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cdn-edge::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CPU utilization on cdn-edge in eu-west-1 has breached 99%, affecting 2.1K users. Sustained load suggests potential saturation or runaway process. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "7fc5db90-f2ef-4f57-a1aa-8f7021f03e59",
+    "timestamp": "2026-08-22T04:20:08.168Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "payment-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 36398,
+    "metadata": {
+      "cpu_percent": 82,
+      "duration_seconds": 83
+    },
+    "score": 0.8312,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2737,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service is pegging CPU at 82% in ap-northeast-1. If unresolved, this may cascade to dependent services within minutes. ⚡ Immediate action required."
+  },
+  {
+    "id": "1da30234-1659-40d9-b10e-603ebbcb84cd",
+    "timestamp": "2026-08-22T04:20:11.467Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "dashboard",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 7035,
+    "metadata": {
+      "error_rate": 36.27,
+      "prev_error_rate": 1.53
+    },
+    "score": 0.6133,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2308,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "dashboard client error rate spike in us-west-2: 36.27% of requests returning errors for 7.0K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "f2660548-f453-4f78-aedf-48be899702ce",
+    "timestamp": "2026-08-22T04:20:13.379Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "payment-service",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 10772,
+    "metadata": {
+      "packet_loss_pct": 14.49,
+      "error_rate": 15.69
+    },
+    "score": 0.5369,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2419,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Network error rate spike on payment-service in us-west-2: 14.49% packet loss detected, impacting 10.8K users. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "4a2c89f2-0255-45f6-ad5f-93345e8ea868",
+    "timestamp": "2026-08-22T04:20:14.942Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "mobile-api",
+    "region": "ap-southeast-1",
+    "severity": 1,
+    "userImpact": 1847,
+    "metadata": {
+      "flag": "cache-ttl",
+      "state": "decreased"
+    },
+    "score": 0.4035,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.196,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::mobile-api::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "mobile-api config updated in ap-southeast-1: cache-ttl is now decreased. Observe downstream behavior. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "6568bfe4-1543-4eb9-ae04-0a76f78cdf01",
+    "timestamp": "2026-08-22T04:20:18.826Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 3428,
+    "metadata": {
+      "percent": 93,
+      "free_gb": 26.12
+    },
+    "score": 0.6821,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2121,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Disk usage on worker-queue in ap-northeast-1 has reached 93%. Log rotation or cleanup required to prevent write failures. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "e51356ba-45dc-495b-a8fd-169a8919a592",
+    "timestamp": "2026-08-22T04:20:22.010Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "search-ui",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 40385,
+    "metadata": {
+      "error_rate": 32,
+      "prev_error_rate": 1.99
+    },
+    "score": 0.8339,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2764,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "search-ui client error rate spike in ap-southeast-1: 32% of requests returning errors for 40.4K users. ⚡ Immediate action required."
+  },
+  {
+    "id": "26dbc941-a152-4209-abf3-0fd1b4ffdbc6",
+    "timestamp": "2026-08-22T04:20:22.010Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 13647,
+    "metadata": {
+      "abandonment_rate": 64.82,
+      "revenue_impact": 21140.07
+    },
+    "score": 0.5431,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2481,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "E-commerce signal: cart abandonment up 64.82% on checkout-flow (us-east-1). $21,140/hr revenue at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "f9f01f73-ded9-45d0-912a-76df85f28fa2",
+    "timestamp": "2026-08-22T04:20:23.410Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "cache-layer",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 6875,
+    "metadata": {
+      "packet_loss_pct": 25.6,
+      "error_rate": 9.73
+    },
+    "score": 0.7002,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2302,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "cache-layer is experiencing connectivity issues in us-east-1. 6.9K users seeing request timeouts. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "a8f25610-070e-4d92-a653-e49cd4cafdde",
+    "timestamp": "2026-08-22T04:20:27.722Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "payment-service",
+    "region": "ap-southeast-1",
+    "severity": 4,
+    "userImpact": 4904,
+    "metadata": {
+      "packet_loss_pct": 26.86,
+      "error_rate": 21.2
+    },
+    "score": 0.6914,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2214,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Elevated network errors on payment-service (ap-southeast-1): 26.86% of requests failing. Possible upstream routing issue. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "e2e202da-af3a-40ea-a16d-30c0797f036b",
+    "timestamp": "2026-08-22T04:20:28.742Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "mobile-api",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 2587,
+    "metadata": {
+      "flag": "timeout-ms",
+      "state": "disabled"
+    },
+    "score": 0.5873,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2048,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::mobile-api::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Runtime config mutation on mobile-api (ap-southeast-1): flag \"timeout-ms\" set to disabled. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "ab1972c7-8d7c-4e83-8fe3-554c26b670df",
+    "timestamp": "2026-08-22T04:20:32.097Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "user-portal",
+    "region": "ap-southeast-1",
+    "severity": 4,
+    "userImpact": 38767,
+    "metadata": {
+      "percent": 61.2,
+      "drop_count": 25748
+    },
+    "score": 0.7453,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2753,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on user-portal (ap-southeast-1): 61.2% of active users disconnected simultaneously. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "8b4fdabc-1504-4d33-80ae-dba9044ca548",
+    "timestamp": "2026-08-22T04:20:32.566Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "api-gateway",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 10348,
+    "metadata": {
+      "packet_loss_pct": 13.23,
+      "error_rate": 22.87
+    },
+    "score": 0.6234,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2409,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Network error rate spike on api-gateway in us-east-1: 13.23% packet loss detected, impacting 10.3K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "cb76bc96-f804-4144-86f3-f5c9ffe5bd43",
+    "timestamp": "2026-08-22T04:20:37.156Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "auth-service",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 963,
+    "metadata": {
+      "percent": 98,
+      "heap_used_gb": 18.81
+    },
+    "score": 0.649,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.179,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Memory alert on auth-service in ap-northeast-1: 98% consumed. Potential memory leak detected across 963 active sessions. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "885991e2-cc26-4af8-a5f5-9f5de87a711e",
+    "timestamp": "2026-08-22T04:20:37.621Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "user-portal",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 21700,
+    "metadata": {
+      "failure_rate": 59.72,
+      "attempts": 2328
+    },
+    "score": 0.8177,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2602,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Login failure rate on user-portal is 59.72% in us-west-2. 21.7K users unable to authenticate. ⚡ Immediate action required."
+  },
+  {
+    "id": "d51b80d2-cecb-45e5-bd02-6e76e43beac4",
+    "timestamp": "2026-08-22T04:20:41.875Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 2744,
+    "metadata": {
+      "percent": 85,
+      "free_gb": 7.66
+    },
+    "score": 0.5888,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2063,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue disk usage critical at 85% in ap-northeast-1. Database writes may begin failing within 2–4 hours. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "5a6bec00-b4fc-4abf-b852-3b9f256845e9",
+    "timestamp": "2026-08-22T04:20:43.594Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "admin-portal",
+    "region": "ap-southeast-1",
+    "severity": 1,
+    "userImpact": 8774,
+    "metadata": {
+      "flag_name": "dark-mode",
+      "flag_state": false,
+      "percent": 68
+    },
+    "score": 0.4441,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.2366,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::admin-portal::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Feature flag \"dark-mode\" toggled disabled on admin-portal in ap-southeast-1, affecting 68% of users. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "a40ab494-5d13-4570-937c-58f75f9298d3",
+    "timestamp": "2026-08-22T04:20:46.745Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "api-gateway",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 10981,
+    "metadata": {
+      "cpu_percent": 87,
+      "duration_seconds": 153
+    },
+    "score": 0.7999,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2424,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on api-gateway (87%) detected in eu-west-1. 11.0K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "f7656adc-1987-485e-b566-db7a65565c4b",
+    "timestamp": "2026-08-22T04:20:48.902Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "admin-portal",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 10062,
+    "metadata": {
+      "failure_rate": 29.64,
+      "attempts": 3755
+    },
+    "score": 0.6227,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2402,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::admin-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Login failure rate on admin-portal is 29.64% in us-east-1. 10.1K users unable to authenticate. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "c56fd4f0-1f28-4b99-a0ac-e6b9afd286f9",
+    "timestamp": "2026-08-22T04:20:53.136Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "api-gateway",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 33497,
+    "metadata": {
+      "latency_ms": 1839,
+      "p99_ms": 10201,
+      "spike_multiplier": 19
+    },
+    "score": 0.7415,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2715,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on api-gateway (eu-west-1): 1839ms response time affecting 33.5K active users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ce5b61fe-a9b8-4ac5-8c1a-69f7b90c9222",
+    "timestamp": "2026-08-22T04:20:55.676Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "billing-service",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 26485,
+    "metadata": {
+      "flag_name": "ai-recommendations",
+      "flag_state": true,
+      "percent": 24
+    },
+    "score": 0.6479,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2654,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "billing-service feature \"ai-recommendations\" is now enabled in eu-west-1. 26.5K users are in the affected cohort. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "588193d9-90f6-4df7-8d9b-854bc7d77501",
+    "timestamp": "2026-08-22T04:20:57.442Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "search-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 43213,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:16:52.442Z",
+      "health_check_failures": 11
+    },
+    "score": 0.8356,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2781,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "search-service is DOWN in ap-northeast-1. All 43.2K active users are blocked. Immediate escalation required. ⚡ Immediate action required."
+  },
+  {
+    "id": "5d61d981-d2d8-49d7-91e2-0e551ad09644",
+    "timestamp": "2026-08-22T04:21:00.031Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 10247,
+    "metadata": {
+      "abandonment_rate": 70.14,
+      "revenue_impact": 35085.62
+    },
+    "score": 0.5356,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2406,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "E-commerce signal: cart abandonment up 70.14% on checkout-flow (us-east-1). $35,086/hr revenue at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "2e2bd26b-4949-4fbb-86c9-0b74bf5a8592",
+    "timestamp": "2026-08-22T04:21:03.117Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 2,
+    "userImpact": 52681,
+    "metadata": {
+      "latency_ms": 2289,
+      "p99_ms": 10318,
+      "spike_multiplier": 4
+    },
+    "score": 0.5783,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2833,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on worker-queue (ap-southeast-1): 2289ms response time affecting 52.7K active users. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "da802b3f-cd4d-41d4-b5a8-488ebcbd24a4",
+    "timestamp": "2026-08-22T04:21:05.271Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "onboarding",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 4162,
+    "metadata": {
+      "failure_rate": 55.5,
+      "attempts": 1106
+    },
+    "score": 0.7747,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2172,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Login failure rate on onboarding is 55.5% in ap-northeast-1. 4.2K users unable to authenticate. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "dd63b6ed-3591-48fd-875a-cffe141d14e7",
+    "timestamp": "2026-08-22T04:21:05.271Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "support-portal",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 22206,
+    "metadata": {
+      "percent": 71.02,
+      "drop_count": 45242
+    },
+    "score": 0.7308,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2608,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on support-portal (ap-northeast-1): 71.02% of active users disconnected simultaneously. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "2b7a8e4f-db2b-456a-bfa0-f80f2673e3d3",
+    "timestamp": "2026-08-22T04:21:08.290Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "worker-queue",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 98276,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:13:05.290Z",
+      "health_check_failures": 11
+    },
+    "score": 0.857,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2995,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CRITICAL: worker-queue health checks failing in us-east-1. 98.3K users completely unable to access the service. ⚡ Immediate action required."
+  },
+  {
+    "id": "40646033-e326-47bf-b27f-9f93baee4b6d",
+    "timestamp": "2026-08-22T04:21:09.948Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "notification-service",
+    "region": "ap-southeast-1",
+    "severity": 1,
+    "userImpact": 6549,
+    "metadata": {
+      "flag": "retry-policy",
+      "state": "disabled"
+    },
+    "score": 0.4365,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.229,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::notification-service::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Configuration change applied to notification-service in ap-southeast-1. Feature flag \"retry-policy\" disabled. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "98a86ecc-2529-4697-a80b-990c58c100c0",
+    "timestamp": "2026-08-22T04:21:13.980Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 11219,
+    "metadata": {
+      "abandonment_rate": 67.98,
+      "revenue_impact": 36827.43
+    },
+    "score": 0.6255,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.243,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Cart abandonment rate on checkout-flow spiked to 67.98% in us-east-1. Revenue impact estimate: $36,827/hr. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "10908169-45e7-440b-ba59-9c09355017fd",
+    "timestamp": "2026-08-22T04:21:15.324Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "db-primary",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 69614,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:12:58.324Z",
+      "health_check_failures": 3
+    },
+    "score": 0.8481,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2906,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Service outage confirmed: db-primary in us-east-1 is unreachable. On-call team should be paged immediately. ⚡ Immediate action required."
+  },
+  {
+    "id": "eee9a7a5-505a-4389-aa72-a10b272ea87f",
+    "timestamp": "2026-08-22T04:21:15.324Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "us-west-2",
+    "severity": 4,
+    "userImpact": 3541,
+    "metadata": {
+      "percent": 86,
+      "free_gb": 12.64
+    },
+    "score": 0.683,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.213,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue disk usage critical at 86% in us-west-2. Database writes may begin failing within 2–4 hours. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "7362798a-20c3-4234-a4f0-a8c6f4fcb3ce",
+    "timestamp": "2026-08-22T04:21:22.312Z",
+    "source": "product",
+    "type": "rollback",
+    "service": "mobile-api",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 25685,
+    "metadata": {
+      "version": "6.4.73",
+      "reason": "memory_leak"
+    },
+    "score": 0.8221,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2646,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::mobile-api::rollback",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "mobile-api deployment rolled back in ap-northeast-1. Engineers are investigating root cause of memory_leak. ⚡ Immediate action required."
+  },
+  {
+    "id": "dcee4ab1-198c-4c50-b110-967bbbb3df0c",
+    "timestamp": "2026-08-22T04:21:23.091Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "cache-layer",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 78541,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:18:17.091Z",
+      "health_check_failures": 9
+    },
+    "score": 0.8512,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2937,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CRITICAL: cache-layer health checks failing in us-east-1. 78.5K users completely unable to access the service. ⚡ Immediate action required."
+  },
+  {
+    "id": "37d20329-826d-40a9-b199-f1fff751e6c6",
+    "timestamp": "2026-08-22T04:21:25.475Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "dashboard",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 46154,
+    "metadata": {
+      "error_rate": 34.83,
+      "prev_error_rate": 0.69
+    },
+    "score": 0.6624,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2799,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "User-facing error rate on dashboard jumped to 34.83% in us-west-2. 46.2K users encountering failures. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "5621e569-a7e7-46b0-9634-e3de2df4d743",
+    "timestamp": "2026-08-22T04:21:29.734Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "cdn-edge",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 1745,
+    "metadata": {
+      "packet_loss_pct": 24.11,
+      "error_rate": 13.92
+    },
+    "score": 0.6645,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.1945,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cdn-edge::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Network error rate spike on cdn-edge in ap-northeast-1: 24.11% packet loss detected, impacting 1.7K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "33981bb3-24fb-4bb7-ae5f-f23189a85199",
+    "timestamp": "2026-08-22T04:21:33.558Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "search-ui",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 22633,
+    "metadata": {
+      "percent": 83.03,
+      "drop_count": 26048
+    },
+    "score": 0.7313,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2613,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on search-ui dropped 83.03% in eu-west-1. Possible crash or forced logouts affecting 22.6K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "31fad657-c662-4349-aa2e-d4e8f8b81e1f",
+    "timestamp": "2026-08-22T04:21:37.202Z",
+    "source": "product",
+    "type": "rollback",
+    "service": "mobile-api",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 18925,
+    "metadata": {
+      "version": "7.21.69",
+      "reason": "critical_bug"
+    },
+    "score": 0.7266,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2566,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::mobile-api::rollback",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Urgent rollback: mobile-api v7.21.69 reverted in ap-northeast-1 after critical_bug detected post-deploy. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "831aeb9f-39ca-4912-868f-93f45d1570b5",
+    "timestamp": "2026-08-22T04:21:37.688Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "cache-layer",
+    "region": "ap-northeast-1",
+    "severity": 2,
+    "userImpact": 31080,
+    "metadata": {
+      "latency_ms": 604,
+      "p99_ms": 1602,
+      "spike_multiplier": 20
+    },
+    "score": 0.5645,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2695,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on cache-layer has surged to 604ms in ap-northeast-1, exceeding SLA threshold by 20×. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "3238d572-f74a-44ef-9bdd-afd4b9f0ac1c",
+    "timestamp": "2026-08-22T04:21:44.178Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 4670,
+    "metadata": {
+      "abandonment_rate": 62.85,
+      "revenue_impact": 9254.87
+    },
+    "score": 0.5152,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2202,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow checkout flow abandonment surge in us-west-2: 62.85% drop-off. Possible payment gateway or UX issue. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "f39fdd37-94ab-4abe-a21f-184efe32447b",
+    "timestamp": "2026-08-22T04:21:45.260Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "db-primary",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 11382,
+    "metadata": {
+      "latency_ms": 7646,
+      "p99_ms": 3034,
+      "spike_multiplier": 12
+    },
+    "score": 0.6259,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2434,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on db-primary has surged to 7646ms in ap-southeast-1, exceeding SLA threshold by 12×. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "a9056c1b-0bf6-4e46-a2f2-ff55ec6ad17e",
+    "timestamp": "2026-08-22T04:21:49.320Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "dashboard",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 25100,
+    "metadata": {
+      "percent": 61.91,
+      "drop_count": 40447
+    },
+    "score": 0.6465,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.264,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on dashboard dropped 61.91% in eu-west-1. Possible crash or forced logouts affecting 25.1K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "9aad5f26-ace4-4971-ba5a-dd5782075aeb",
+    "timestamp": "2026-08-22T04:21:52.693Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "payment-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 12527,
+    "metadata": {
+      "latency_ms": 562,
+      "p99_ms": 14681,
+      "spike_multiplier": 7
+    },
+    "score": 0.8034,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2459,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service p99 latency spike in ap-northeast-1: 562ms. 12.5K users experiencing slow page loads. ⚡ Immediate action required."
+  },
+  {
+    "id": "e1f8c47d-3df9-48ab-9d9c-178e9778e74b",
+    "timestamp": "2026-08-22T04:21:53.493Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "mobile-api",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 6843,
+    "metadata": {
+      "flag": "rate-limit",
+      "state": "decreased"
+    },
+    "score": 0.6126,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2301,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::mobile-api::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Runtime config mutation on mobile-api (eu-west-1): flag \"rate-limit\" set to decreased. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "c0b47815-cfb7-40eb-bb26-f7e0365ab52f",
+    "timestamp": "2026-08-22T04:21:54.559Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "dashboard",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 5683,
+    "metadata": {
+      "percent": 36.87,
+      "drop_count": 5504
+    },
+    "score": 0.7028,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2253,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on dashboard dropped 36.87% in us-east-1. Possible crash or forced logouts affecting 5.7K users. 2 other user-behavior events share similar timing — possible common root cause. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "b2c07e32-db37-4354-b00b-25ca2e77b047",
+    "timestamp": "2026-08-22T04:21:54.559Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 12550,
+    "metadata": {
+      "percent": 84,
+      "drop_count": 28230
+    },
+    "score": 0.6359,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2459,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow session collapse in us-east-1: 12.6K sessions terminated unexpectedly. 2 other user-behavior events share similar timing — possible common root cause. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "43a13049-9559-499d-b63b-5d3c6d58719e",
+    "timestamp": "2026-08-22T04:21:57.032Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "db-primary",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 12877,
+    "metadata": {
+      "packet_loss_pct": 16.55,
+      "error_rate": 38.28
+    },
+    "score": 0.6291,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2466,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Elevated network errors on db-primary (us-east-1): 16.55% of requests failing. Possible upstream routing issue. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "8b72cdc7-6680-439c-a2d2-55fc3d78df5b",
+    "timestamp": "2026-08-22T04:22:00.358Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "support-portal",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 39128,
+    "metadata": {
+      "error_rate": 17.77,
+      "prev_error_rate": 0.52
+    },
+    "score": 0.658,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2755,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "support-portal client error rate spike in ap-southeast-1: 17.77% of requests returning errors for 39.1K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "78fb9d71-7b94-42dd-860b-80da1adb28bf",
+    "timestamp": "2026-08-22T04:22:02.085Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "search-service",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 48866,
+    "metadata": {
+      "latency_ms": 1228,
+      "p99_ms": 10921,
+      "spike_multiplier": 17
+    },
+    "score": 0.6638,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2813,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on search-service has surged to 1228ms in ap-southeast-1, exceeding SLA threshold by 17×. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "6e0b8cad-623a-4142-a1ba-4a9e8d13d4dd",
+    "timestamp": "2026-08-22T04:22:02.085Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "cache-layer",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 4700,
+    "metadata": {
+      "percent": 84,
+      "free_gb": 49.63
+    },
+    "score": 0.5153,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2203,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Storage capacity warning: cache-layer (us-west-2) at 84% disk. Write-ahead logs may be at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "1d110514-9c02-4ea8-8e4c-5f29149d1a0f",
+    "timestamp": "2026-08-22T04:22:05.666Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "admin-portal",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 20374,
+    "metadata": {
+      "failure_rate": 50.18,
+      "attempts": 4189
+    },
+    "score": 0.641,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2585,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::admin-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Authentication spike: 20.4K failed login attempts on admin-portal in ap-northeast-1. Potential credential stuffing or outage. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "f91fe1f1-0cf6-46bd-b3bc-dbf24662dc67",
+    "timestamp": "2026-08-22T04:22:05.666Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "onboarding",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 623,
+    "metadata": {
+      "spike_multiplier": 15,
+      "top_issue": "payment-failing"
+    },
+    "score": 0.5502,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.1677,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "623 new support tickets filed for onboarding in us-east-1 in the last 15 minutes. Common theme: \"payment-failing\". ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "7b3a2caa-711d-47e6-ba42-fd49b403437a",
+    "timestamp": "2026-08-22T04:22:06.662Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "auth-service",
+    "region": "ap-northeast-1",
+    "severity": 2,
+    "userImpact": 13945,
+    "metadata": {
+      "latency_ms": 6408,
+      "p99_ms": 13358,
+      "spike_multiplier": 19
+    },
+    "score": 0.5437,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2487,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on auth-service has surged to 6408ms in ap-northeast-1, exceeding SLA threshold by 19×. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "c699b874-88c4-4c15-9996-af0b5ee94ec7",
+    "timestamp": "2026-08-22T04:22:10.809Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "billing-service",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 7824,
+    "metadata": {
+      "version": "7.32.20",
+      "commit": "8520d1ee",
+      "deployer": "bob"
+    },
+    "score": 0.5286,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2336,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Deployment completed: billing-service v7.32.20 in us-west-2. 7.8K users are on the new version. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "6d73445b-c8dc-47be-bdfa-299171f8c814",
+    "timestamp": "2026-08-22T04:22:12.468Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "db-primary",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 19261,
+    "metadata": {
+      "packet_loss_pct": 29.54,
+      "error_rate": 33.63
+    },
+    "score": 0.6396,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2571,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Elevated network errors on db-primary (us-east-1): 29.54% of requests failing. Possible upstream routing issue. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "6b27e7f5-dd03-4c05-99ec-d6bb6366d500",
+    "timestamp": "2026-08-22T04:22:14.877Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 46689,
+    "metadata": {
+      "percent": 30.78,
+      "drop_count": 43971
+    },
+    "score": 0.6702,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2802,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on checkout-flow dropped 30.78% in us-east-1. Possible crash or forced logouts affecting 46.7K users. Cluster of 2 related user-behavior events observed in the same window. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "db5b6e30-0cd1-426d-bbba-6efb54f00cb8",
+    "timestamp": "2026-08-22T04:22:14.877Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "user-portal",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 19229,
+    "metadata": {
+      "percent": 49.63,
+      "drop_count": 8558
+    },
+    "score": 0.647,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.257,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "user-portal session collapse in eu-west-1: 19.2K sessions terminated unexpectedly. Cluster of 2 related user-behavior events observed in the same window. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "12e6d62c-078a-40d1-a4c1-b6e7ce2ac10e",
+    "timestamp": "2026-08-22T04:22:18.270Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 2,
+    "userImpact": 15221,
+    "metadata": {
+      "packet_loss_pct": 17.44,
+      "error_rate": 7.57
+    },
+    "score": 0.5459,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2509,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue is experiencing connectivity issues in ap-southeast-1. 15.2K users seeing request timeouts. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "8d2aa9d3-2e24-4ace-a594-8d18b25baa19",
+    "timestamp": "2026-08-22T04:22:23.246Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "payment-service",
+    "region": "us-west-2",
+    "severity": 4,
+    "userImpact": 11883,
+    "metadata": {
+      "packet_loss_pct": 12.2,
+      "error_rate": 15.82
+    },
+    "score": 0.7145,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2445,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service is experiencing connectivity issues in us-west-2. 11.9K users seeing request timeouts. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "64d24c30-e984-485b-ab31-3e8115e0764e",
+    "timestamp": "2026-08-22T04:22:23.246Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "db-primary",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 3517,
+    "metadata": {
+      "percent": 82,
+      "heap_used_gb": 16.13
+    },
+    "score": 0.5953,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2128,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "db-primary is running low on heap memory in ap-northeast-1 (82% used). OOM kill risk if traffic continues. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "d968bd81-496e-4e8c-8adb-c34344f97f25",
+    "timestamp": "2026-08-22T04:22:24.302Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "checkout-flow",
+    "region": "us-west-2",
+    "severity": 4,
+    "userImpact": 23481,
+    "metadata": {
+      "percent": 83.43,
+      "drop_count": 25817
+    },
+    "score": 0.7322,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2622,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on checkout-flow (us-west-2): 83.43% of active users disconnected simultaneously. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "f9d03b33-0312-4a7f-8461-d0dce11f35d5",
+    "timestamp": "2026-08-22T04:22:25.841Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "billing-service",
+    "region": "ap-southeast-1",
+    "severity": 1,
+    "userImpact": 3676,
+    "metadata": {
+      "flag": "cache-ttl",
+      "state": "decreased"
+    },
+    "score": 0.4214,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.2139,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Configuration change applied to billing-service in ap-southeast-1. Feature flag \"cache-ttl\" decreased. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "d713581e-b979-420d-9ea8-bffdfb7a91ca",
+    "timestamp": "2026-08-22T04:22:28.711Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "search-service",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 4417,
+    "metadata": {
+      "latency_ms": 7368,
+      "p99_ms": 5184,
+      "spike_multiplier": 10
+    },
+    "score": 0.7762,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2187,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on search-service (us-west-2): 7368ms response time affecting 4.4K active users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "6f282ef8-087c-4650-afd2-a3ef7eee9e49",
+    "timestamp": "2026-08-22T04:22:32.756Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "us-west-2",
+    "severity": 4,
+    "userImpact": 4104,
+    "metadata": {
+      "percent": 78,
+      "free_gb": 48.6
+    },
+    "score": 0.6868,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2168,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue disk usage critical at 78% in us-west-2. Database writes may begin failing within 2–4 hours. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "d9687941-bf9c-4876-8f0a-f02511bd527f",
+    "timestamp": "2026-08-22T04:22:33.872Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "dashboard",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 1306,
+    "metadata": {
+      "percent": 39.04,
+      "drop_count": 24572
+    },
+    "score": 0.7445,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.187,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on dashboard (us-west-2): 39.04% of active users disconnected simultaneously. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "7a982279-a038-4d45-ac64-a74289db739d",
+    "timestamp": "2026-08-22T04:22:38.741Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "search-service",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 20779,
+    "metadata": {
+      "percent": 82,
+      "heap_used_gb": 9.65
+    },
+    "score": 0.6416,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2591,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "search-service is running low on heap memory in ap-southeast-1 (82% used). OOM kill risk if traffic continues. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "e2a71f4f-9a60-49ae-9016-e31b2970e584",
+    "timestamp": "2026-08-22T04:22:40.352Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "checkout-flow",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 20453,
+    "metadata": {
+      "percent": 30.04,
+      "drop_count": 25829
+    },
+    "score": 0.8161,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2586,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on checkout-flow (eu-west-1): 30.04% of active users disconnected simultaneously. ⚡ Immediate action required."
+  },
+  {
+    "id": "a186a299-2fc3-4c78-8e42-472145e03e0a",
+    "timestamp": "2026-08-22T04:22:43.003Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "admin-portal",
+    "region": "ap-northeast-1",
+    "severity": 2,
+    "userImpact": 13504,
+    "metadata": {
+      "version": "1.96.46",
+      "commit": "bb18d27f",
+      "deployer": "charlie"
+    },
+    "score": 0.5428,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2478,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::admin-portal::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "admin-portal v1.96.46 deployed to ap-northeast-1. Rollback available if metrics degrade in next 15 minutes. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "b7cd1313-96c5-4bb3-a200-f7f4767943d3",
+    "timestamp": "2026-08-22T04:22:45.955Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "search-service",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 9418,
+    "metadata": {
+      "percent": 88,
+      "heap_used_gb": 8.18
+    },
+    "score": 0.5334,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2384,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "search-service is running low on heap memory in us-east-1 (88% used). OOM kill risk if traffic continues. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "388b4981-6757-4dc2-8c8c-d1bac7fdb9e1",
+    "timestamp": "2026-08-22T04:22:48.568Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "user-portal",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 39876,
+    "metadata": {
+      "percent": 36.31,
+      "drop_count": 43571
+    },
+    "score": 0.746,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.276,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on user-portal (eu-west-1): 36.31% of active users disconnected simultaneously. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "68289c9e-9694-4f5f-9249-a1c3a23f0129",
+    "timestamp": "2026-08-22T04:22:50.758Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "api-gateway",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 35464,
+    "metadata": {
+      "latency_ms": 7563,
+      "p99_ms": 2448,
+      "spike_multiplier": 18
+    },
+    "score": 0.6555,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.273,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "api-gateway p99 latency spike in ap-northeast-1: 7563ms. 35.5K users experiencing slow page loads. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "7b84c203-c502-4919-a337-282701d587f1",
+    "timestamp": "2026-08-22T04:22:55.653Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "onboarding",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 1168,
+    "metadata": {
+      "percent": 76.47,
+      "drop_count": 46135
+    },
+    "score": 0.7416,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.1841,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "onboarding session collapse in us-west-2: 1.2K sessions terminated unexpectedly. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "12c89817-db6e-4f2f-9780-6dc1abf4d2a8",
+    "timestamp": "2026-08-22T04:22:55.833Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "payment-service",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 51216,
+    "metadata": {
+      "latency_ms": 2518,
+      "p99_ms": 1835,
+      "spike_multiplier": 3
+    },
+    "score": 0.8401,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2826,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service p99 latency spike in ap-southeast-1: 2518ms. 51.2K users experiencing slow page loads. ⚡ Immediate action required."
+  },
+  {
+    "id": "9636caac-aaad-4351-b64e-94fb2ad9b6f9",
+    "timestamp": "2026-08-22T04:22:57.122Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "web-app",
+    "region": "eu-west-1",
+    "severity": 1,
+    "userImpact": 34458,
+    "metadata": {
+      "flag_name": "onboarding-flow-b",
+      "flag_state": true,
+      "percent": 5
+    },
+    "score": 0.4797,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.2722,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::web-app::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "A/B test adjustment: onboarding-flow-b is enabled on web-app (eu-west-1) for 5% traffic. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "c90be8cc-ce28-4239-8d18-b79059c9e95f",
+    "timestamp": "2026-08-22T04:23:01.090Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "search-service",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 33802,
+    "metadata": {
+      "cpu_percent": 98,
+      "duration_seconds": 116
+    },
+    "score": 0.6542,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2717,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on search-service (98%) detected in ap-northeast-1. 33.8K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "58ac4b20-d101-413a-b3f5-c97240f2bb03",
+    "timestamp": "2026-08-22T04:23:01.212Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "support-portal",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 29590,
+    "metadata": {
+      "error_rate": 13.67,
+      "prev_error_rate": 1.1
+    },
+    "score": 0.6508,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2683,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "User-facing error rate on support-portal jumped to 13.67% in eu-west-1. 29.6K users encountering failures. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "d76cb0ab-f3d2-4e14-8a56-9e10e753a818",
+    "timestamp": "2026-08-22T04:23:06.340Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "api-gateway",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 13806,
+    "metadata": {
+      "cpu_percent": 80,
+      "duration_seconds": 41
+    },
+    "score": 0.7184,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2484,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on api-gateway (80%) detected in eu-west-1. 13.8K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "39037ebb-ecae-4116-84d5-549a033a4dd7",
+    "timestamp": "2026-08-22T04:23:09.473Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "ap-southeast-1",
+    "severity": 4,
+    "userImpact": 8806,
+    "metadata": {
+      "abandonment_rate": 35.6,
+      "revenue_impact": 13205.23
+    },
+    "score": 0.7067,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2367,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "E-commerce signal: cart abandonment up 35.6% on checkout-flow (ap-southeast-1). $13,205/hr revenue at risk. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "2c643a26-a6ea-4e79-8ea9-7ff71cea0074",
+    "timestamp": "2026-08-22T04:23:09.473Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "admin-portal",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 6587,
+    "metadata": {
+      "failure_rate": 59.55,
+      "attempts": 177
+    },
+    "score": 0.6116,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2291,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::admin-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Login failure rate on admin-portal is 59.55% in ap-northeast-1. 6.6K users unable to authenticate. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "0d349d01-4ecb-481a-b5c6-af132b84144c",
+    "timestamp": "2026-08-22T04:23:10.483Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "notification-service",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 39237,
+    "metadata": {
+      "flag_name": "beta-dashboard",
+      "flag_state": false,
+      "percent": 67
+    },
+    "score": 0.5706,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2756,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::notification-service::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Feature flag \"beta-dashboard\" toggled disabled on notification-service in us-west-2, affecting 67% of users. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "dad92434-aa30-4de0-a61f-2266c38e3c4c",
+    "timestamp": "2026-08-22T04:23:14.216Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "payment-service",
+    "region": "us-west-2",
+    "severity": 4,
+    "userImpact": 39993,
+    "metadata": {
+      "latency_ms": 2085,
+      "p99_ms": 1626,
+      "spike_multiplier": 8
+    },
+    "score": 0.7461,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2761,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on payment-service (us-west-2): 2085ms response time affecting 40.0K active users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "447ba82a-8dbb-49e6-ac41-895d6031be6c",
+    "timestamp": "2026-08-22T04:23:19.899Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "search-service",
+    "region": "eu-west-1",
+    "severity": 2,
+    "userImpact": 19636,
+    "metadata": {
+      "packet_loss_pct": 15.05,
+      "error_rate": 38.51
+    },
+    "score": 0.5526,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2576,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "search-service is experiencing connectivity issues in eu-west-1. 19.6K users seeing request timeouts. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "6ef2693b-c9a0-4a23-b62d-18ec335033b5",
+    "timestamp": "2026-08-22T04:23:20.010Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "user-portal",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 21878,
+    "metadata": {
+      "failure_rate": 37.7,
+      "attempts": 2885
+    },
+    "score": 0.8179,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2604,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "user-portal showing elevated login failures (37.7%) in us-east-1. Security and reliability investigation needed. ⚡ Immediate action required."
+  },
+  {
+    "id": "d93c9968-d585-409a-9614-4b74a88e0526",
+    "timestamp": "2026-08-22T04:23:20.010Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "dashboard",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 36496,
+    "metadata": {
+      "percent": 82.21,
+      "drop_count": 10624
+    },
+    "score": 0.6562,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2737,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on dashboard dropped 82.21% in ap-northeast-1. Possible crash or forced logouts affecting 36.5K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "7820777f-69fd-467f-9af9-a4db07c51244",
+    "timestamp": "2026-08-22T04:23:26.566Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "db-primary",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 72121,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:19:50.566Z",
+      "health_check_failures": 12
+    },
+    "score": 0.849,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2915,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CRITICAL: db-primary health checks failing in eu-west-1. 72.1K users completely unable to access the service. ⚡ Immediate action required."
+  },
+  {
+    "id": "4a59130e-ab76-41f7-8878-59d8d917ce56",
+    "timestamp": "2026-08-22T04:23:26.905Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "admin-portal",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 22384,
+    "metadata": {
+      "failure_rate": 27.79,
+      "attempts": 6278
+    },
+    "score": 0.731,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.261,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::admin-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "admin-portal showing elevated login failures (27.79%) in us-east-1. Security and reliability investigation needed. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "d3f83ba8-4eb3-4991-bb2e-fe9ccf7d146c",
+    "timestamp": "2026-08-22T04:23:26.925Z",
+    "source": "product",
+    "type": "rollback",
+    "service": "notification-service",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 16148,
+    "metadata": {
+      "version": "4.66.46",
+      "reason": "memory_leak"
+    },
+    "score": 0.7225,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2525,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::notification-service::rollback",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "notification-service deployment rolled back in us-east-1. Engineers are investigating root cause of memory_leak. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "f5381935-f00e-490a-aa03-d21dc9cd64a5",
+    "timestamp": "2026-08-22T04:23:33.945Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "search-service",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 45063,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:15:11.945Z",
+      "health_check_failures": 17
+    },
+    "score": 0.8367,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2792,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "search-service is DOWN in eu-west-1. All 45.1K active users are blocked. Immediate escalation required. ⚡ Immediate action required."
+  },
+  {
+    "id": "4ef7e02a-7458-42fa-97c7-467087ea3e14",
+    "timestamp": "2026-08-22T04:23:37.136Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "user-portal",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 19204,
+    "metadata": {
+      "percent": 65.75,
+      "drop_count": 36341
+    },
+    "score": 0.8145,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.257,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on user-portal dropped 65.75% in us-west-2. Possible crash or forced logouts affecting 19.2K users. ⚡ Immediate action required."
+  },
+  {
+    "id": "c2519251-d04f-4698-b1a5-cc416a84b1ab",
+    "timestamp": "2026-08-22T04:23:37.136Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "search-ui",
+    "region": "ap-southeast-1",
+    "severity": 4,
+    "userImpact": 35668,
+    "metadata": {
+      "error_rate": 19.16,
+      "prev_error_rate": 1.09
+    },
+    "score": 0.7431,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2731,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Error surge on search-ui (ap-southeast-1): 19.16% error rate. Likely correlated with recent deployment. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ee497a02-c9b2-4305-88bd-57cbf1bbac9b",
+    "timestamp": "2026-08-22T04:23:39.743Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "auth-service",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 26901,
+    "metadata": {
+      "cpu_percent": 99,
+      "duration_seconds": 233
+    },
+    "score": 0.8233,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2658,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on auth-service (99%) detected in eu-west-1. 26.9K users are experiencing degraded response times. ⚡ Immediate action required."
+  },
+  {
+    "id": "81e749ee-2409-48ce-b890-7c24384a9373",
+    "timestamp": "2026-08-22T04:23:42.930Z",
+    "source": "product",
+    "type": "rollback",
+    "service": "billing-service",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 35293,
+    "metadata": {
+      "version": "2.26.97",
+      "reason": "latency_regression"
+    },
+    "score": 0.6554,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2729,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::rollback",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "billing-service deployment rolled back in eu-west-1. Engineers are investigating root cause of latency_regression. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "7bd08cd1-cff1-42e7-8f9f-96a0a1474ce0",
+    "timestamp": "2026-08-22T04:23:45.406Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "db-primary",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 403,
+    "metadata": {
+      "percent": 94,
+      "free_gb": 43.39
+    },
+    "score": 0.6264,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.1564,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "db-primary disk usage critical at 94% in ap-northeast-1. Database writes may begin failing within 2–4 hours. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "35fa3bc9-ec2c-451a-abe1-cca260fc4cb8",
+    "timestamp": "2026-08-22T04:23:46.673Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "user-portal",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 27056,
+    "metadata": {
+      "error_rate": 9.93,
+      "prev_error_rate": 0.81
+    },
+    "score": 0.8234,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2659,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Error surge on user-portal (us-west-2): 9.93% error rate. Likely correlated with recent deployment. ⚡ Immediate action required."
+  },
+  {
+    "id": "b16ef911-292e-4d7c-aebb-08d78909ca86",
+    "timestamp": "2026-08-22T04:23:50.291Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "payment-service",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 33210,
+    "metadata": {
+      "cpu_percent": 92,
+      "duration_seconds": 51
+    },
+    "score": 0.8288,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2713,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service is pegging CPU at 92% in ap-southeast-1. If unresolved, this may cascade to dependent services within minutes. ⚡ Immediate action required."
+  },
+  {
+    "id": "0bc8cf6c-79a2-47b0-8a7b-c3d668c66d23",
+    "timestamp": "2026-08-22T04:23:52.887Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 13619,
+    "metadata": {
+      "abandonment_rate": 62.59,
+      "revenue_impact": 22764.75
+    },
+    "score": 0.5431,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2481,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "E-commerce signal: cart abandonment up 62.59% on checkout-flow (us-east-1). $22,765/hr revenue at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "19ec722d-4dd3-4791-bd89-f9bdc8409b19",
+    "timestamp": "2026-08-22T04:23:55.306Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 22715,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:19:47.306Z",
+      "health_check_failures": 14
+    },
+    "score": 0.8189,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2614,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue is DOWN in ap-southeast-1. All 22.7K active users are blocked. Immediate escalation required. ⚡ Immediate action required."
+  },
+  {
+    "id": "a708e0e7-7e67-4d18-9deb-add22d4fa464",
+    "timestamp": "2026-08-22T04:23:58.470Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "onboarding",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 7932,
+    "metadata": {
+      "failure_rate": 23.87,
+      "attempts": 6601
+    },
+    "score": 0.704,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.234,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::onboarding::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "onboarding showing elevated login failures (23.87%) in eu-west-1. Security and reliability investigation needed. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "3e84e8c5-5bcb-4f3d-a6b7-42c5acdcd450",
+    "timestamp": "2026-08-22T04:24:00.693Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "billing-service",
+    "region": "ap-northeast-1",
+    "severity": 1,
+    "userImpact": 15578,
+    "metadata": {
+      "version": "9.65.0",
+      "commit": "540a37ba",
+      "deployer": "alice"
+    },
+    "score": 0.4591,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.2516,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Deployment completed: billing-service v9.65.0 in ap-northeast-1. 15.6K users are on the new version. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "a9afbf1b-d131-4ad1-9108-2fcf35f81844",
+    "timestamp": "2026-08-22T04:24:03.110Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "cache-layer",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 2595,
+    "metadata": {
+      "percent": 88,
+      "free_gb": 3.1
+    },
+    "score": 0.4999,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2049,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Disk usage on cache-layer in us-west-2 has reached 88%. Log rotation or cleanup required to prevent write failures. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "a6e0fd8b-eb00-4328-8392-398502b2a8d2",
+    "timestamp": "2026-08-22T04:24:06.388Z",
+    "source": "user-behavior",
+    "type": "login_failure",
+    "service": "admin-portal",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 3541,
+    "metadata": {
+      "failure_rate": 36.46,
+      "attempts": 4225
+    },
+    "score": 0.7705,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.213,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::admin-portal::login_failure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Login failure rate on admin-portal is 36.46% in us-east-1. 3.5K users unable to authenticate. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "db4c9bb5-6362-4461-a9ae-42980563d4e2",
+    "timestamp": "2026-08-22T04:24:06.388Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "support-portal",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 5709,
+    "metadata": {
+      "spike_multiplier": 6,
+      "top_issue": "export-broken"
+    },
+    "score": 0.6079,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2254,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support ticket volume on support-portal spiked 6× above baseline in us-east-1. Top issue: \"export-broken\". 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "6c1a695a-a60f-4064-b0b9-d5869c939d16",
+    "timestamp": "2026-08-22T04:24:10.243Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 1870,
+    "metadata": {
+      "percent": 88,
+      "free_gb": 18.12
+    },
+    "score": 0.6663,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.1963,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue disk usage critical at 88% in us-east-1. Database writes may begin failing within 2–4 hours. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "eef2ee44-e560-44f1-be76-312f3a7e4816",
+    "timestamp": "2026-08-22T04:24:10.243Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "worker-queue",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 49732,
+    "metadata": {
+      "cpu_percent": 88,
+      "duration_seconds": 277
+    },
+    "score": 0.6643,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2818,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on worker-queue (88%) detected in us-west-2. 49.7K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "d49eaf7b-83fc-4c0f-8b19-e8336e5d50dc",
+    "timestamp": "2026-08-22T04:24:15.285Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "eu-west-1",
+    "severity": 4,
+    "userImpact": 9490,
+    "metadata": {
+      "abandonment_rate": 30.34,
+      "revenue_impact": 22297.82
+    },
+    "score": 0.7161,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2386,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 2,
+      "relatedEvents": [
+        "1c97226d-5d6a-4319-8e8c-4d84aa54beda"
+      ],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow checkout flow abandonment surge in eu-west-1: 30.34% drop-off. Possible payment gateway or UX issue. 2 other user-behavior events share similar timing — possible common root cause. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "1c97226d-5d6a-4319-8e8c-4d84aa54beda",
+    "timestamp": "2026-08-22T04:24:15.285Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 10029,
+    "metadata": {
+      "abandonment_rate": 67.55,
+      "revenue_impact": 25041.12
+    },
+    "score": 0.6301,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2401,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 2,
+      "relatedEvents": [
+        "d49eaf7b-83fc-4c0f-8b19-e8336e5d50dc"
+      ],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow checkout flow abandonment surge in us-west-2: 67.55% drop-off. Possible payment gateway or UX issue. 2 other user-behavior events share similar timing — possible common root cause. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "af32f894-1f55-4d1f-a097-6d401edc60b6",
+    "timestamp": "2026-08-22T04:24:16.506Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "cdn-edge",
+    "region": "ap-northeast-1",
+    "severity": 3,
+    "userImpact": 69399,
+    "metadata": {
+      "latency_ms": 7611,
+      "p99_ms": 7303,
+      "spike_multiplier": 14
+    },
+    "score": 0.673,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2905,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cdn-edge::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Response latency on cdn-edge has surged to 7611ms in ap-northeast-1, exceeding SLA threshold by 14×. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "69d5041e-a5a8-4554-bb6d-5254a20c6b83",
+    "timestamp": "2026-08-22T04:24:18.148Z",
+    "source": "product",
+    "type": "feature_flag",
+    "service": "admin-portal",
+    "region": "eu-west-1",
+    "severity": 2,
+    "userImpact": 35786,
+    "metadata": {
+      "flag_name": "payment-v3",
+      "flag_state": true,
+      "percent": 6
+    },
+    "score": 0.5682,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2732,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::admin-portal::feature_flag",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "A/B test adjustment: payment-v3 is enabled on admin-portal (eu-west-1) for 6% traffic. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "ba1f150c-f6f6-480d-b639-9d6af25ffd2e",
+    "timestamp": "2026-08-22T04:24:22.901Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "payment-service",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 85333,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:16:53.901Z",
+      "health_check_failures": 20
+    },
+    "score": 0.8534,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2959,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Service outage confirmed: payment-service in eu-west-1 is unreachable. On-call team should be paged immediately. ⚡ Immediate action required."
+  },
+  {
+    "id": "00f5e2f6-8266-4f0b-9e3c-d09d9a6cf2e3",
+    "timestamp": "2026-08-22T04:24:24.820Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "checkout-flow",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 12580,
+    "metadata": {
+      "percent": 35.55,
+      "drop_count": 43371
+    },
+    "score": 0.8035,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.246,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow session collapse in ap-northeast-1: 12.6K sessions terminated unexpectedly. ⚡ Immediate action required."
+  },
+  {
+    "id": "698411c3-72b6-4469-a491-1c3426a1b2d7",
+    "timestamp": "2026-08-22T04:24:29.952Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "cache-layer",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 36879,
+    "metadata": {
+      "latency_ms": 3063,
+      "p99_ms": 8072,
+      "spike_multiplier": 15
+    },
+    "score": 0.8315,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.274,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on cache-layer (us-east-1): 3063ms response time affecting 36.9K active users. ⚡ Immediate action required."
+  },
+  {
+    "id": "837c47f3-c7fd-4a59-aa0d-0aad7418a46a",
+    "timestamp": "2026-08-22T04:24:29.952Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "cache-layer",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 4145,
+    "metadata": {
+      "packet_loss_pct": 22.15,
+      "error_rate": 28.01
+    },
+    "score": 0.5996,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2171,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "cache-layer is experiencing connectivity issues in ap-southeast-1. 4.1K users seeing request timeouts. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "4a89ca9f-dd8b-4ad4-a25f-385533800687",
+    "timestamp": "2026-08-22T04:24:34.629Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "auth-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 45969,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:22:39.629Z",
+      "health_check_failures": 13
+    },
+    "score": 0.8372,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2797,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "auth-service is DOWN in ap-northeast-1. All 46.0K active users are blocked. Immediate escalation required. ⚡ Immediate action required."
+  },
+  {
+    "id": "76f5b7e2-ac6d-477f-879f-8c1fd7213e1d",
+    "timestamp": "2026-08-22T04:24:34.721Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "notification-service",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 1203,
+    "metadata": {
+      "version": "4.47.22",
+      "commit": "f4e8bc2d",
+      "deployer": "bob"
+    },
+    "score": 0.4798,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.1848,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::notification-service::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "New deployment of notification-service v4.47.22 is live in us-east-1. Monitor error rates and latency for regression. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "61996cb0-b753-4ec2-93dc-25b400233d24",
+    "timestamp": "2026-08-22T04:24:35.434Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "dashboard",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 4378,
+    "metadata": {
+      "percent": 33.59,
+      "drop_count": 48802
+    },
+    "score": 0.776,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2185,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::dashboard::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Mass session drop on dashboard (us-west-2): 33.59% of active users disconnected simultaneously. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "0655a08c-a342-4c85-b5a9-b234d6c040dd",
+    "timestamp": "2026-08-22T04:24:40.358Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "payment-service",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 28623,
+    "metadata": {
+      "latency_ms": 6041,
+      "p99_ms": 6879,
+      "spike_multiplier": 5
+    },
+    "score": 0.6499,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2674,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "payment-service p99 latency spike in ap-southeast-1: 6041ms. 28.6K users experiencing slow page loads. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "fe738a87-724c-4ecb-b8b1-1a80338540b3",
+    "timestamp": "2026-08-22T04:24:40.358Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 1232,
+    "metadata": {
+      "percent": 92,
+      "free_gb": 32.65
+    },
+    "score": 0.4805,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.1855,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Storage capacity warning: worker-queue (us-east-1) at 92% disk. Write-ahead logs may be at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "9223be45-c254-47e8-8346-4c5a7455c363",
+    "timestamp": "2026-08-22T04:24:47.284Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "user-portal",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 2464,
+    "metadata": {
+      "spike_multiplier": 14,
+      "top_issue": "export-broken"
+    },
+    "score": 0.6735,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2035,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support escalation: user-portal tickets surging in us-east-1. 2.5K affected users reporting \"export-broken\". 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "566eed55-5935-4dc1-864a-8202ae5fac3f",
+    "timestamp": "2026-08-22T04:24:47.938Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "search-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 50208,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:16:11.938Z",
+      "health_check_failures": 16
+    },
+    "score": 0.8395,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.282,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "search-service is DOWN in ap-northeast-1. All 50.2K active users are blocked. Immediate escalation required. ⚡ Immediate action required."
+  },
+  {
+    "id": "29ff0857-dea9-4fbe-9c62-f7c6c302029a",
+    "timestamp": "2026-08-22T04:24:50.500Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "admin-portal",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 9100,
+    "metadata": {
+      "version": "5.41.71",
+      "commit": "13220fdb",
+      "deployer": "bob"
+    },
+    "score": 0.5325,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2375,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::admin-portal::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "admin-portal v5.41.71 deployed to us-east-1. Rollback available if metrics degrade in next 15 minutes. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "83a9bfe4-a969-465c-8df6-5d2692f2dc9b",
+    "timestamp": "2026-08-22T04:24:52.875Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "db-primary",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 1550,
+    "metadata": {
+      "packet_loss_pct": 14.08,
+      "error_rate": 10.97
+    },
+    "score": 0.5739,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.1914,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "db-primary is experiencing connectivity issues in us-west-2. 1.6K users seeing request timeouts. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "b762e5ce-7f49-4bee-9894-7aa93f66c6ce",
+    "timestamp": "2026-08-22T04:24:58.234Z",
+    "source": "user-behavior",
+    "type": "session_drop",
+    "service": "support-portal",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 12810,
+    "metadata": {
+      "percent": 61.36,
+      "drop_count": 35502
+    },
+    "score": 0.804,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2465,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::session_drop",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Active session count on support-portal dropped 61.36% in us-east-1. Possible crash or forced logouts affecting 12.8K users. ⚡ Immediate action required."
+  },
+  {
+    "id": "59a5c408-1833-4827-b002-892ee4af8e50",
+    "timestamp": "2026-08-22T04:24:58.744Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "cache-layer",
+    "region": "us-west-2",
+    "severity": 4,
+    "userImpact": 27395,
+    "metadata": {
+      "percent": 97,
+      "heap_used_gb": 14.26
+    },
+    "score": 0.7363,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2663,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Memory alert on cache-layer in us-west-2: 97% consumed. Potential memory leak detected across 27.4K active sessions. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "cdaf6f6f-e33e-42f0-8ed6-9a189c308874",
+    "timestamp": "2026-08-22T04:25:03.038Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "analytics-pipeline",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 3313,
+    "metadata": {
+      "flag": "timeout-ms",
+      "state": "disabled"
+    },
+    "score": 0.5062,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2112,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::analytics-pipeline::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "analytics-pipeline config updated in us-east-1: timeout-ms is now disabled. Observe downstream behavior. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "046beda0-ce4d-46bd-a1ec-d5c2bcf8f4ad",
+    "timestamp": "2026-08-22T04:25:03.696Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "cache-layer",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 20713,
+    "metadata": {
+      "cpu_percent": 81,
+      "duration_seconds": 96
+    },
+    "score": 0.6415,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.259,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "cache-layer is pegging CPU at 81% in ap-southeast-1. If unresolved, this may cascade to dependent services within minutes. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ff81bfd5-2d6f-48ac-ba1f-20067e05d9f5",
+    "timestamp": "2026-08-22T04:25:04.224Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 6454,
+    "metadata": {
+      "abandonment_rate": 43.84,
+      "revenue_impact": 30136.58
+    },
+    "score": 0.5236,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2286,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow checkout flow abandonment surge in us-east-1: 43.84% drop-off. Possible payment gateway or UX issue. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "f6702084-3b70-42fa-8683-2f6681f146a7",
+    "timestamp": "2026-08-22T04:25:09.985Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "search-service",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 20863,
+    "metadata": {
+      "cpu_percent": 95,
+      "duration_seconds": 197
+    },
+    "score": 0.7292,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2592,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CPU utilization on search-service in ap-northeast-1 has breached 95%, affecting 20.9K users. Sustained load suggests potential saturation or runaway process. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "b8892ab4-dc41-484d-9618-4f0302631f77",
+    "timestamp": "2026-08-22T04:25:09.985Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "worker-queue",
+    "region": "eu-west-1",
+    "severity": 2,
+    "userImpact": 3805,
+    "metadata": {
+      "percent": 88,
+      "free_gb": 49
+    },
+    "score": 0.5098,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2148,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Storage capacity warning: worker-queue (eu-west-1) at 88% disk. Write-ahead logs may be at risk. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "f87e2db6-3e00-45d7-aa1f-404952f5291f",
+    "timestamp": "2026-08-22T04:25:13.947Z",
+    "source": "user-behavior",
+    "type": "cart_abandonment",
+    "service": "checkout-flow",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 7650,
+    "metadata": {
+      "abandonment_rate": 39.98,
+      "revenue_impact": 41173.36
+    },
+    "score": 0.528,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.233,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::checkout-flow::cart_abandonment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "checkout-flow checkout flow abandonment surge in us-west-2: 39.98% drop-off. Possible payment gateway or UX issue. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "075895be-6906-40bd-b8f6-58f7180a7c8c",
+    "timestamp": "2026-08-22T04:25:15.301Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "cache-layer",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 4892,
+    "metadata": {
+      "percent": 95,
+      "free_gb": 2.88
+    },
+    "score": 0.6039,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2214,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Disk usage on cache-layer in ap-southeast-1 has reached 95%. Log rotation or cleanup required to prevent write failures. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "f3a54567-fc35-4f68-a360-40cadc9196ea",
+    "timestamp": "2026-08-22T04:25:16.726Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "analytics-pipeline",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 818,
+    "metadata": {
+      "flag": "max-connections",
+      "state": "enabled"
+    },
+    "score": 0.4698,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.1748,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::analytics-pipeline::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Runtime config mutation on analytics-pipeline (us-east-1): flag \"max-connections\" set to enabled. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "40312ad6-0b1d-47b6-beb1-0ef87bd002a6",
+    "timestamp": "2026-08-22T04:25:19.600Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "search-service",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 13677,
+    "metadata": {
+      "packet_loss_pct": 21.4,
+      "error_rate": 34.46
+    },
+    "score": 0.7182,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2482,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::search-service::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Network error rate spike on search-service in us-east-1: 21.4% packet loss detected, impacting 13.7K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "b128d348-f4ce-4725-8fc8-ef38c2a4f4b3",
+    "timestamp": "2026-08-22T04:25:19.600Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "db-primary",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 13124,
+    "metadata": {
+      "cpu_percent": 86,
+      "duration_seconds": 172
+    },
+    "score": 0.7171,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2471,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CPU utilization on db-primary in ap-northeast-1 has breached 86%, affecting 13.1K users. Sustained load suggests potential saturation or runaway process. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "285d5011-ffcc-44a0-9f1a-d8ff17ca24e5",
+    "timestamp": "2026-08-22T04:25:24.818Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "search-ui",
+    "region": "eu-west-1",
+    "severity": 3,
+    "userImpact": 1165,
+    "metadata": {
+      "spike_multiplier": 15,
+      "top_issue": "payment-failing"
+    },
+    "score": 0.5665,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.184,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support escalation: search-ui tickets surging in eu-west-1. 1.2K affected users reporting \"payment-failing\". ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "53011bf7-7c9a-46f5-bb4a-a15c5d176b91",
+    "timestamp": "2026-08-22T04:25:26.580Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "worker-queue",
+    "region": "ap-southeast-1",
+    "severity": 3,
+    "userImpact": 65650,
+    "metadata": {
+      "latency_ms": 2879,
+      "p99_ms": 1227,
+      "spike_multiplier": 13
+    },
+    "score": 0.6715,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.289,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "worker-queue p99 latency spike in ap-southeast-1: 2879ms. 65.7K users experiencing slow page loads. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "7b9e57c9-4bc7-4808-af3c-55012b4e0ac1",
+    "timestamp": "2026-08-22T04:25:30.761Z",
+    "source": "infrastructure",
+    "type": "network_error",
+    "service": "worker-queue",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 16666,
+    "metadata": {
+      "packet_loss_pct": 18.75,
+      "error_rate": 38.45
+    },
+    "score": 0.5483,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2533,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::network_error",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Elevated network errors on worker-queue (us-east-1): 18.75% of requests failing. Possible upstream routing issue. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "1d4896c3-a6ae-4b36-be3e-18a70a34b026",
+    "timestamp": "2026-08-22T04:25:32.495Z",
+    "source": "product",
+    "type": "config_change",
+    "service": "billing-service",
+    "region": "us-west-2",
+    "severity": 3,
+    "userImpact": 6457,
+    "metadata": {
+      "flag": "max-connections",
+      "state": "increased"
+    },
+    "score": 0.6111,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2286,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::billing-service::config_change",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "Runtime config mutation on billing-service (us-west-2): flag \"max-connections\" set to increased. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "e92c723d-0680-4eee-b581-363f0d6d15c0",
+    "timestamp": "2026-08-22T04:25:34.215Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "support-portal",
+    "region": "eu-west-1",
+    "severity": 2,
+    "userImpact": 7753,
+    "metadata": {
+      "spike_multiplier": 11,
+      "top_issue": "notification-not-sent"
+    },
+    "score": 0.5284,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2334,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support escalation: support-portal tickets surging in eu-west-1. 7.8K affected users reporting \"notification-not-sent\". ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "078a4522-155a-4d9b-b992-1c8a44e8f6d4",
+    "timestamp": "2026-08-22T04:25:37.133Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "payment-service",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 78293,
+    "metadata": {
+      "latency_ms": 616,
+      "p99_ms": 12390,
+      "spike_multiplier": 15
+    },
+    "score": 0.8511,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2936,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on payment-service (ap-northeast-1): 616ms response time affecting 78.3K active users. ⚡ Immediate action required."
+  },
+  {
+    "id": "44a7b284-a2c7-4285-99b8-5cb080020e09",
+    "timestamp": "2026-08-22T04:25:37.133Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "api-gateway",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 19711,
+    "metadata": {
+      "cpu_percent": 94,
+      "duration_seconds": 253
+    },
+    "score": 0.8152,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2577,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::api-gateway::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CPU utilization on api-gateway in ap-northeast-1 has breached 94%, affecting 19.7K users. Sustained load suggests potential saturation or runaway process. ⚡ Immediate action required."
+  },
+  {
+    "id": "c6f3f317-0788-4108-bfa5-e1f915904ee5",
+    "timestamp": "2026-08-22T04:25:40.179Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "support-portal",
+    "region": "us-west-2",
+    "severity": 2,
+    "userImpact": 6698,
+    "metadata": {
+      "spike_multiplier": 7,
+      "top_issue": "payment-failing"
+    },
+    "score": 0.5246,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.2296,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "6.7K new support tickets filed for support-portal in us-west-2 in the last 15 minutes. Common theme: \"payment-failing\". ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "68bfe372-b21f-414d-a841-e1053eda5209",
+    "timestamp": "2026-08-22T04:25:42.488Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "cdn-edge",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 18180,
+    "metadata": {
+      "cpu_percent": 82,
+      "duration_seconds": 67
+    },
+    "score": 0.7256,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2556,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cdn-edge::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on cdn-edge (82%) detected in us-east-1. 18.2K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "621127a4-4198-46dd-a968-aa9f517b3e23",
+    "timestamp": "2026-08-22T04:25:42.488Z",
+    "source": "infrastructure",
+    "type": "disk_warning",
+    "service": "db-primary",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 891,
+    "metadata": {
+      "percent": 82,
+      "free_gb": 36.64
+    },
+    "score": 0.5595,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.177,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::db-primary::disk_warning",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "db-primary disk usage critical at 82% in us-east-1. Database writes may begin failing within 2–4 hours. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "5678c5e5-be48-458d-98e5-b462fa1da5d1",
+    "timestamp": "2026-08-22T04:25:46.678Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "user-portal",
+    "region": "ap-northeast-1",
+    "severity": 5,
+    "userImpact": 27717,
+    "metadata": {
+      "error_rate": 19.32,
+      "prev_error_rate": 1.26
+    },
+    "score": 0.8316,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2666,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "user-portal client error rate spike in ap-northeast-1: 19.32% of requests returning errors for 27.7K users. Cluster of 2 related user-behavior events observed in the same window. ⚡ Immediate action required."
+  },
+  {
+    "id": "2d22f4eb-6ba1-4a66-b831-419aa95d9314",
+    "timestamp": "2026-08-22T04:25:46.678Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "support-portal",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 28579,
+    "metadata": {
+      "error_rate": 5.42,
+      "prev_error_rate": 1.92
+    },
+    "score": 0.7449,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2674,
+      "recency": 0.2,
+      "frequency": 0.015
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "User-facing error rate on support-portal jumped to 5.42% in us-east-1. 28.6K users encountering failures. This correlates with 2 similar events from user-behavior in the last 15 minutes. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "ddbbc80f-1060-459c-8290-cbe17c6deca9",
+    "timestamp": "2026-08-22T04:25:47.296Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "web-app",
+    "region": "ap-northeast-1",
+    "severity": 1,
+    "userImpact": 11617,
+    "metadata": {
+      "version": "5.17.60",
+      "commit": "ac557616",
+      "deployer": "ci-robot"
+    },
+    "score": 0.4514,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0,
+      "impact": 0.2439,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::web-app::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "New deployment of web-app v5.17.60 is live in ap-northeast-1. Monitor error rates and latency for regression. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "9bc0a58b-941a-4b12-baa8-f780875ac3d1",
+    "timestamp": "2026-08-22T04:25:49.547Z",
+    "source": "infrastructure",
+    "type": "memory_pressure",
+    "service": "cache-layer",
+    "region": "us-east-1",
+    "severity": 5,
+    "userImpact": 22160,
+    "metadata": {
+      "percent": 76,
+      "heap_used_gb": 28.17
+    },
+    "score": 0.8182,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2607,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::cache-layer::memory_pressure",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Memory alert on cache-layer in us-east-1: 76% consumed. Potential memory leak detected across 22.2K active sessions. ⚡ Immediate action required."
+  },
+  {
+    "id": "c0af386e-cc07-47f0-b319-1d6c9421c002",
+    "timestamp": "2026-08-22T04:25:53.698Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "support-portal",
+    "region": "eu-west-1",
+    "severity": 5,
+    "userImpact": 7903,
+    "metadata": {
+      "error_rate": 32.12,
+      "prev_error_rate": 1.58
+    },
+    "score": 0.7914,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2339,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::support-portal::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "support-portal client error rate spike in eu-west-1: 32.12% of requests returning errors for 7.9K users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "d5602f0e-21a9-4304-81eb-3833573e340c",
+    "timestamp": "2026-08-22T04:25:57.383Z",
+    "source": "infrastructure",
+    "type": "latency_spike",
+    "service": "auth-service",
+    "region": "us-east-1",
+    "severity": 3,
+    "userImpact": 24369,
+    "metadata": {
+      "latency_ms": 4592,
+      "p99_ms": 12099,
+      "spike_multiplier": 12
+    },
+    "score": 0.6457,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.175,
+      "impact": 0.2632,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::auth-service::latency_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "Latency degradation detected on auth-service (us-east-1): 4592ms response time affecting 24.4K active users. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "dd994427-cebf-480d-a84e-d38f7deef1a1",
+    "timestamp": "2026-08-22T04:25:59.647Z",
+    "source": "user-behavior",
+    "type": "support_ticket_burst",
+    "service": "user-portal",
+    "region": "us-east-1",
+    "severity": 4,
+    "userImpact": 7328,
+    "metadata": {
+      "spike_multiplier": 10,
+      "top_issue": "missing-data"
+    },
+    "score": 0.7019,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2319,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::user-portal::support_ticket_burst",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Support escalation: user-portal tickets surging in us-east-1. 7.3K affected users reporting \"missing-data\". 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "8d5fd176-ba7f-456e-9baa-00d105db838b",
+    "timestamp": "2026-08-22T04:26:00.174Z",
+    "source": "product",
+    "type": "deployment",
+    "service": "analytics-pipeline",
+    "region": "us-east-1",
+    "severity": 2,
+    "userImpact": 1847,
+    "metadata": {
+      "version": "1.45.21",
+      "commit": "cf38693b",
+      "deployer": "ci-robot"
+    },
+    "score": 0.491,
+    "priority": "P3",
+    "priorityColor": "#eab308",
+    "scoreBreakdown": {
+      "severity": 0.0875,
+      "impact": 0.196,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "product::analytics-pipeline::deployment",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "product"
+    },
+    "narrative": "analytics-pipeline v1.45.21 deployed to us-east-1. Rollback available if metrics degrade in next 15 minutes. ℹ️ Monitor and address within the hour."
+  },
+  {
+    "id": "093dad89-a8e6-4c7d-af6a-447c80b91cb0",
+    "timestamp": "2026-08-22T04:26:02.029Z",
+    "source": "infrastructure",
+    "type": "cpu_spike",
+    "service": "worker-queue",
+    "region": "ap-northeast-1",
+    "severity": 4,
+    "userImpact": 33606,
+    "metadata": {
+      "cpu_percent": 85,
+      "duration_seconds": 210
+    },
+    "score": 0.7416,
+    "priority": "P2",
+    "priorityColor": "#f97316",
+    "scoreBreakdown": {
+      "severity": 0.2625,
+      "impact": 0.2716,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::worker-queue::cpu_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "High CPU on worker-queue (85%) detected in ap-northeast-1. 33.6K users are experiencing degraded response times. 🔶 Prioritize for next 30 minutes."
+  },
+  {
+    "id": "14c898f9-3861-4e48-84aa-eef2d34eb0e0",
+    "timestamp": "2026-08-22T04:26:04.832Z",
+    "source": "user-behavior",
+    "type": "error_rate_spike",
+    "service": "search-ui",
+    "region": "us-west-2",
+    "severity": 5,
+    "userImpact": 54794,
+    "metadata": {
+      "error_rate": 31.93,
+      "prev_error_rate": 1.63
+    },
+    "score": 0.8418,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2843,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "user-behavior::search-ui::error_rate_spike",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "user-behavior"
+    },
+    "narrative": "Error surge on search-ui (us-west-2): 31.93% error rate. Likely correlated with recent deployment. ⚡ Immediate action required."
+  },
+  {
+    "id": "cdb1258a-2db9-413c-86ea-0ba62d419b67",
+    "timestamp": "2026-08-22T04:26:07.044Z",
+    "source": "infrastructure",
+    "type": "service_down",
+    "service": "payment-service",
+    "region": "ap-southeast-1",
+    "severity": 5,
+    "userImpact": 69219,
+    "metadata": {
+      "last_healthy": "2026-08-22T04:18:42.044Z",
+      "health_check_failures": 12
+    },
+    "score": 0.8479,
+    "priority": "P1",
+    "priorityColor": "#ef4444",
+    "scoreBreakdown": {
+      "severity": 0.35,
+      "impact": 0.2904,
+      "recency": 0.2,
+      "frequency": 0.0075
+    },
+    "correlation": {
+      "clusterId": "infrastructure::payment-service::service_down",
+      "clusterSize": 1,
+      "relatedEvents": [],
+      "source": "infrastructure"
+    },
+    "narrative": "CRITICAL: payment-service health checks failing in ap-southeast-1. 69.2K users completely unable to access the service. ⚡ Immediate action required."
+  }
+]
